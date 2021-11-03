@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {},
+  "scripts": {
+    "dev:server": "nodemon src/server"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sucrase": "^3.20.3"
+  },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.14"
   }
 }
