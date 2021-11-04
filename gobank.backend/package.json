@@ -1,13 +1,18 @@
 {
   "name": "gobank.backend",
-  "version": "1.0.0",
-  "main": "index.js",
+  "author": "Varsel",
+  "email": "contato.varsel@gmail.com",
+  "version": "0.0.1",
+  "private": false,
   "license": "MIT",
   "scripts": {
-    "dev:server": "nodemon src/server"
+    "dev:server": "nodemon src/worker"
   },
   "dependencies": {
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "sucrase": "^3.20.3"
   },
   "devDependencies": {
