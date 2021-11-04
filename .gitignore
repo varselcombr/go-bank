@@ -1,3 +1,4 @@
 gobank.backend/node_modules
 gobank.frontend/node_modules
-.env
+gobank.frontend/.env
+gobank.backend/.env
