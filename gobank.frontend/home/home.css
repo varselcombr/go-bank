@@ -1,0 +1,115 @@
+body{
+   background-color: var(--primary-3);
+}
+header{
+   color: var(--neutral-1);
+   padding: 20px;
+}
+header .profile{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+header .profile .avatarImg{
+   /* Temporario */
+   background-color: var(--neutral-1);
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+}
+
+main{
+   background-color: var(--neutral-1);
+   color: var(--neutral-6);
+   border-radius: 40px;
+   padding: 20px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+
+nav{
+   width: 90%;
+   display: flex;
+   gap: 10px;
+   justify-content: start;
+}
+nav a{
+   background-color: #fff;
+   padding: 5px 10px;
+   border-radius: 20px;
+   color: var(--neutral-4);
+   font-weight: 600;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+nav a span{
+   color: var(--primary-3);
+}
+
+.card{
+   width: 90%;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
+   font-size: 14px;
+}
+
+.card-1{
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+.card-1 .head{
+   display: flex;
+   justify-content: space-between;
+}
+.card-1 .head p{
+   font-weight: 600;
+}
+.card-1 .graf{
+   /* Temporario */
+   height: 5px;
+   background-color: var(--primary-4);
+}
+.card-1 .last{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.card-1 .last .iconImg{
+   /* temporario */
+   width: 40px;
+   height: 40px;
+   background-color: var(--acent-1);
+   border-radius: 50%;
+}
+.card-1 .last .data{
+   margin-left: auto;
+}
+.card-2{
+   padding: 10px 20px;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 600;
+}
+.card-2 span{
+   font-weight: 700;
+   color: var(--primary-4);
+}
+.card-3{
+   display: flex;
+   justify-content: space-between;
+}
+.card-3 img{
+   width: 45px;
+}
+.card-3 a{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   text-align: center;
+   color: var(--neutral-6);
+}
