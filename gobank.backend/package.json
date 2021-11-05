@@ -6,9 +6,11 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "dev:server": "nodemon src/worker"
+    "dev:server": "nodemon src/worker",
+    "dev:queue": "nodemon src/bull"
   },
   "dependencies": {
+    "bull": "^4.1.0",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
