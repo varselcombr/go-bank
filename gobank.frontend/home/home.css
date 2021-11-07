@@ -47,6 +47,142 @@ nav a span{
    color: var(--primary-3);
 }
 
+.carousel {
+   display: flex;
+   flex-direction: row;
+}
+
+/* Primeiro cartão de crédito */
+
+.creditCard {
+   align-items: center;
+
+   width: 298px;
+   height: 178.41px;
+   
+   background: #FFD7CB;
+   border-radius: 20px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.creditCard .logo-goCard {
+   position: relative;
+   top: 10px;
+   left: 15px;
+
+   width: 40px;
+   height: 40px;
+}
+
+.numberCard {
+   position: relative;
+   top: 70px;
+}
+
+.creditCard .logo-masterCard {
+   position: relative;
+   top: 25px;
+   right: 20px;
+   
+   float: right;
+   
+   width: 45px;
+   height: 25px;
+}
+
+.creditCard #numberCard {
+   position: relative;
+   top: 30px;
+   left: 20px;
+
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 23px;
+   line-height: 27px;
+
+   color: #CD7B61;
+}
+
+.creditCard #nameCard, #validityCard {
+   position: relative;
+   top: 55px;
+   left: 20px;
+
+   font-family: var(--open_sans);
+   font-style: normal;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+
+   color: #CD7B61;
+}
+
+/* Segundo cartão de crédito */
+
+.creditCard1 {
+   width: 298px;
+   height: 178.41px;
+   
+   background: #5C3C75;
+   border-radius: 20px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+   margin-left: 50px;
+}
+
+.creditCard1 .logo-goCard {
+   position: relative;
+   top: 10px;
+   left: 15px;
+
+   width: 40px;
+   height: 40px;
+}
+
+.creditCard1 .logo-masterCard {
+   position: relative;
+   top: 25px;
+   right: 20px;
+   
+   float: right;
+   
+   width: 45px;
+   height: 25px;
+}
+
+.creditCard1 #numberCard {
+   position: relative;
+   top: 30px;
+   left: 20px;
+
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 23px;
+   line-height: 27px;
+
+   color: #FFFFFF;
+}
+
+.creditCard1 #nameCard, .creditCard1 #validityCard {
+   position: relative;
+   top: 55px;
+   left: 20px;
+
+   font-family: var(--open_sans);
+   font-style: normal;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+
+   color: #FFFFFF;
+}
+
 .card{
    width: 90%;
    background-color: #fff;
