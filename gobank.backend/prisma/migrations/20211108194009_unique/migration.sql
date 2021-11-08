@@ -53,6 +53,12 @@ CREATE TABLE "Bank" (
     CONSTRAINT "Bank_pkey" PRIMARY KEY ("bank_id")
 );
 
+-- CreateIndex
+CREATE UNIQUE INDEX "User_user_email_key" ON "User"("user_email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_user_phone_key" ON "User"("user_phone");
+
 -- AddForeignKey
 ALTER TABLE "Personal" ADD CONSTRAINT "Personal_personal_accountid_fkey" FOREIGN KEY ("personal_accountid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;
 

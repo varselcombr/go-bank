@@ -14,9 +14,9 @@ model User {
   user_id Int @id @default(autoincrement())
   user_name String
   user_password String
-  user_email String
+  user_email String @unique
   user_recovery String
-  user_phone String
+  user_phone String @unique
   Personal Personal[]
   Card Card[]
   Bank Bank[]
