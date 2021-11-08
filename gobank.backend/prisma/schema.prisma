@@ -28,3 +28,11 @@ model Personal {
   personal_age  String
   personal_profilePic String
 }
+
+model Bank {
+  bank_id Int @id @unique
+  bank_agency String
+  bank_name String
+  bank_account String
+  bank_number String
+}
