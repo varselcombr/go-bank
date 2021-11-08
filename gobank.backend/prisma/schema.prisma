@@ -18,4 +18,13 @@ model Users {
   user_email String
   user_recovery String
   user_phone String
+  
+}
+
+model Personal {
+  personal_account Int @id @unique
+  personal_fname String
+  personal_lname String
+  personal_age  String
+  personal_profilePic String
 }
