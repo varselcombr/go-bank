@@ -36,3 +36,18 @@ model Bank {
   bank_account String
   bank_number String
 }
+
+model Cards {
+  card_id Int @id @unique
+  card_owner String
+  card_password String
+  card_number String
+  card_validate String 
+  card_paymentHistory String
+  card_invoice String 
+  card_invoiceDueDate String
+  card_limit String
+  card_depositHistory String
+  card_withdrawalHistory String
+  card_transferHistory String
+}
