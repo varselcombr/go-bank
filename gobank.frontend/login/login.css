@@ -1,0 +1,98 @@
+main{
+   width: 100vw;
+   height: 100vh;
+   background-color: var(--neutral-1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 60px;
+}
+.container .user{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+.container .img{
+   width: 120px;
+   height: 120px;
+   background-color: #ccc;
+   border-radius: 50%;
+}
+
+.container1 .user #userCpf{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.container1 .user small{
+   color: var(--neutral-5);
+}
+.container1 .btns{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+.container1 .btns a{
+   width: 280px;
+}
+.container1 .btns button{
+   width: 100%;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 20px;
+   font-weight: 600;
+}
+.container1 .btns .login{
+   background-color: var(--primary-3);
+   color: var(--neutral-1);
+}
+.container1 .btns .sign{
+   background-color: transparent;
+   color: var(--primary-3);
+   border: 2px solid var(--primary-3);
+}
+
+.container2{
+   gap: 100px;
+}
+.container2 .user{
+   gap: 20px;
+}
+.container2 #password{
+   outline: none;
+   border: 2px solid var(--primary-3);
+   border-radius: 20px;
+   padding: 5px 10px;
+}
+.container2 .btns{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+.container2 .btns a.ok{
+   width: 280px;
+}
+.container2 .btns .ok button{
+   width: 100%;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 20px;
+   font-weight: 600;
+   background-color: var(--primary-3);
+   color: var(--neutral-1);
+}
+.container2 a.forgot{
+   color: var(--primary-4);
+   border-bottom: 1px solid var(--primary-4);
+}
