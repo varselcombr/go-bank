@@ -1,0 +1,43 @@
+body{
+   height: 100vh;
+   background: url(../src/img/intro-bg.png) no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+}
+.brand h1{
+   color: var(--neutral-1);
+   width: 80%;
+   margin: 30px auto 0;
+}
+.links{
+   width: 290px;
+   margin: 0 auto 15vh;
+   display: flex;
+   flex-direction: column;
+   
+   gap: 10px;
+}
+button{
+   width: 100%;
+   padding: 10px 0;
+   border-radius: 20px;
+   border: none;
+   font-weight: 700;
+   cursor: pointer;
+}
+.links .sign{
+   background-color: var(--neutral-2);
+   color: var(--primary-5);
+}
+.links .login{
+   background-color: transparent;
+   border: 2px solid var(--neutral-2);
+   color: var(--neutral-2);
+}
