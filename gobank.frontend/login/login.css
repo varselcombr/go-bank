@@ -7,6 +7,29 @@ main{
    align-items: center;
 }
 
+@keyframes slidein {
+   from {
+      transform: translate3d(50vw, 0, 0);
+   }
+   to {
+      transform: translate3d(0, 0, 0);
+   }
+}
+@keyframes open {
+   from {
+      transform: scale(0.5);
+   }
+   to{
+      transform: scale(1);
+   }
+}
+main div.container2 {
+   animation: slidein .3s;
+}
+main div.container3{
+   animation: open .5s;
+}
+
 .container{
    display: flex;
    flex-direction: column;
@@ -95,4 +118,28 @@ main{
 .container2 a.forgot{
    color: var(--primary-4);
    border-bottom: 1px solid var(--primary-4);
+}
+
+.container3{
+   width: 75%;
+   justify-content: center;
+}
+.container3 h3{
+   font-weight: 400;
+   text-align: center;
+}
+.container3 img{
+   width: 240px;
+}
+.container3 p{
+   text-align: center;
+}
+.container3 button{
+   width: 280px;
+   padding: 10px 0;
+   border-radius: 20px;
+   border: none;
+   background-color: var(--primary-3);
+   color: var(--neutral-1);
+   cursor: pointer;
 }
