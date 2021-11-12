@@ -274,7 +274,7 @@ braces@~3.0.2:
 
 bull@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.npmjs.org/bull/-/bull-4.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/bull/-/bull-4.1.0.tgz#ff8f628694e7dbbdf89b6a6860a1f33e990527fd"
   integrity sha512-rQcLuAmzZIv1dHJO/yKrWu497xcTxMpYeTEBfpStrJFZ1UZpBSGHSx+defbtFVeGEeY8Pn0aMGRvRtldUBVUyQ==
   dependencies:
     cron-parser "^2.13.0"
@@ -581,6 +581,11 @@ dot-prop@^5.2.0:
   integrity sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==
   dependencies:
     is-obj "^2.0.0"
+
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -1647,7 +1652,7 @@ node-modules-regexp@^1.0.0:
 
 nodemailer@^6.7.0:
   version "6.7.0"
-  resolved "https://registry.npmjs.org/nodemailer/-/nodemailer-6.7.0.tgz"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.0.tgz#86614722c4e0c33d1b5b02aecb90d6d629932b0d"
   integrity sha512-AtiTVUFHLiiDnMQ43zi0YgkzHOEWUkhDgPlBXrsDzJiJvB29Alo4OKxHQ0ugF3gRqRQIneCLtZU3yiUo7pItZw==
 
 nodemon@^2.0.14:
