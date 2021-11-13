@@ -43,7 +43,7 @@ function displayFirtAcess(pass){
       container3.classList.add('container3')
       container3.innerHTML = `
          <h3><strong>Samantha</strong>, sua conta já está aberta</h3>
-         <img src="../src/img/illustration 1.png" alt="one word trade illustration">
+         <img src="../src/img/illustration1.png" alt="one word trade illustration">
          <p><small>Pode começar a comemorar e criar planos, com nosso apoio você finalmente poderá sonhar alto</small></p>
          <a href="#"><button>PRIMEIROS PASSOS</button></a>
       `

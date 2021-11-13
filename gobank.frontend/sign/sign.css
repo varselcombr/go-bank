@@ -1,0 +1,118 @@
+main{
+   width: 100vw;
+   height: 100vh;
+   background-color: var(--neutral-1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.btn{
+   width: 280px;
+   padding: 10px;
+   border: none;
+   background-color: var(--primary-3);
+   color: var(--neutral-1);
+   border-radius: 20px;
+   font-weight: 600;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.container1{
+   width: 95%;
+   padding: 30px;
+   gap: 20px;
+}
+.container1 h2{
+   font-weight: 400;
+}
+.container1 p{
+   text-align: center;
+}
+
+.container2{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.chatContainer{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 50px;
+   width: 90%;
+   overflow-y: scroll;
+}
+.chatContainer::-webkit-scrollbar{
+   display: none;
+}
+.sistemMsg{
+   width: fit-content;
+   max-width: 75%;
+   background-color: var(--primary-4);
+   color: var(--neutral-1);
+   padding: 10px 15px;
+   border-radius: 10px 10px 10px 0;
+   align-self: flex-start;
+   text-align: start;
+   font-size: 14px;
+}
+.sistemMsg .terms{
+   width: fit-content;
+   display: block;
+   color: var(--neutral-1);
+   border: 1px solid var(--neutral-1);
+   border-radius: 5px;
+   margin-top: 10px;
+   padding: 4px 8px;
+   cursor: pointer;
+}
+.userMsg{
+   width: fit-content;
+   max-width: 75%;
+   background-color: var(--primary-3);
+   color: var(--neutral-1);
+   padding: 10px 15px;
+   border-radius: 10px 10px 0 10px;
+   align-self: flex-end;
+   font-size: 14px;
+}
+.userInput{
+   width: 95%;
+   background-color: var(--neutral-2);
+   border-radius: 30px;
+   padding: 10px;
+   margin: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+.userInput input{
+   width: 85%;
+   border: none;
+   outline: none;
+   background: none;
+   padding-left: 10px;
+   color: var(--neutral-6);
+   font-size: 14px;
+}
+.userInput input::-webkit-input-placeholder{
+   color: var(--neutral-6);
+   font-size: 14px;
+}
+.userInput button{
+   width: 36px;
+   height: 36px;
+   background-color: var(--neutral-1);
+   border-radius: 50%;
+   border: none;
+   cursor: pointer;
+}
+.userInput button img{
+   width: 14px;
+   margin: auto;
+}
