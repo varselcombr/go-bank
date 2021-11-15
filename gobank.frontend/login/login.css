@@ -31,6 +31,7 @@ main div.container3{
 }
 
 .container{
+   max-width: 425px;
    display: flex;
    flex-direction: column;
    align-items: center;
