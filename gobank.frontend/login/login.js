@@ -45,7 +45,7 @@ function displayFirtAcess(pass){
          <h3><strong>Samantha</strong>, sua conta já está aberta</h3>
          <img src="../src/img/illustration1.png" alt="one word trade illustration">
          <p><small>Pode começar a comemorar e criar planos, com nosso apoio você finalmente poderá sonhar alto</small></p>
-         <a href="#"><button>PRIMEIROS PASSOS</button></a>
+         <a href="first"><button>PRIMEIROS PASSOS</button></a>
       `
       main.appendChild(container3)
    }
