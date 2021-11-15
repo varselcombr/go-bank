@@ -1,5 +1,6 @@
 body{
    background-color: var(--primary-3);
+   overflow-x: hidden;
 }
 header{
    color: var(--neutral-1);
@@ -57,12 +58,14 @@ nav a span{
 .creditCard {
    align-items: center;
 
-   width: 298px;
-   height: 178.41px;
+   width: 288px;
+   height: 170px;
    
    background: #FFD7CB;
    border-radius: 20px;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   
+   transition: 0.5s;
 }
 
 .creditCard .logo-goCard {
@@ -98,7 +101,7 @@ nav a span{
    font-family: Roboto;
    font-style: normal;
    font-weight: 500;
-   font-size: 23px;
+   font-size: 20.5px;
    line-height: 27px;
 
    color: #CD7B61;
@@ -123,14 +126,17 @@ nav a span{
 /* Segundo cartão de crédito */
 
 .creditCard1 {
-   width: 298px;
-   height: 178.41px;
+   position: absolute;
+   width: 288px;
+   height: 170px;
    
    background: #5C3C75;
    border-radius: 20px;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-   margin-left: 50px;
+   margin-left: 300px;
+   
+   transition: 0.5s;
 }
 
 .creditCard1 .logo-goCard {
@@ -161,7 +167,7 @@ nav a span{
    font-family: Roboto;
    font-style: normal;
    font-weight: 500;
-   font-size: 23px;
+   font-size: 20.5px;
    line-height: 27px;
 
    color: #FFFFFF;
@@ -181,6 +187,40 @@ nav a span{
    text-transform: uppercase;
 
    color: #FFFFFF;
+}
+
+.carouselButtons {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-end;
+
+   width: 100%;
+}
+
+#cartao1 {
+   position: relative;
+   top: 180px;
+   left: -45%;
+
+   width: 12px;
+   height: 12px;
+   background: #873F8C;
+
+   border-radius: 100%;
+}
+
+#cartao2 {
+   position: relative;
+   top: 180px;
+   left: -45%;
+
+   margin-left: 5px;
+
+   width: 12px;
+   height: 12px;
+   background: #D0D5DB;
+
+   border-radius: 100%;
 }
 
 .card{

@@ -21,7 +21,7 @@
          <a href="#">Conta</a>
       </nav>
       <div class="carousel">
-         <div class="creditCard">
+         <div onclick="moveCard1()" id="creditCard1" class="creditCard">
             <img class="logo-goCard" src="../src/icons/logo-goCard.svg" alt="logo do Go Card">
             <p id="numberCard"><strong>6212 2115 5234 0914</strong></p>
             <p id="nameCard">Samantha kudrow</p>
@@ -29,13 +29,19 @@
             <img class="logo-masterCard" src="../src/icons/logo-masterCard.svg" alt="logo MasterCard">
          </div>
 
-         <div class="creditCard1">
+         <div onclick="moveCard2()" id="creditCard2" class="creditCard1">
             <img class="logo-goCard" src="../src/icons/logo-goCard.svg" alt="logo do Go Card">
             <p id="numberCard"><strong>6212 2115 5234 0914</strong></p>
             <p id="nameCard">Samantha kudrow</p>
             <p id="validityCard">02/27</p>
             <img class="logo-masterCard" src="../src/icons/logo-masterCard.svg" alt="logo MasterCard">
          </div>
+         
+         
+         <div onclick="moveCard2()" id="cartao1"></div>
+         <div onclick="moveCard2()" id="cartao2"></div>
+         
+
       </div>
       <div class="card card-1">
          <div class="head">
@@ -83,5 +89,7 @@
          
       </div>
    </main>
+
+<script src="home.js"></script>
 </body>
 </html>
