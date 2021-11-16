@@ -18,24 +18,3 @@ function moveCard1() {
 
   botao1.style.background = "#873F8C"
   botao2.style.background = "#D0D5DB"
-}
-
-
-/* Quem sabe eu nn use né?
-function moveToCard1() {
-  console.log("clicou");
-  card1.style.opacity = "0"
-  card2.style.opacity = "1"
-
-  botao2.style.background = "#873F8C"
-}
-
-function moveToCard2() {
-  card1.style.opacity = "1"
-  card2.style.opacity = "0"
-  
-  //card1.style.transform = "translateX(100px)"
-
-  botao1.style.background = "#D0D5DB"
-}
- */
