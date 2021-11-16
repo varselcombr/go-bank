@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,50 +8,52 @@ datasource db {
 }
 
 model User {
-  user_id Int @id @default(autoincrement())
-  user_name String
+  user_id       Int        @id @default(autoincrement())
+  user_name     String
   user_password String
-  user_email String @unique
+  user_email    String     @unique
   user_recovery String
-  user_phone String @unique
-  Personal Personal[]
-  Card Card[]
-  Bank Bank[]
-}
-
-model Personal {
-  personal_id Int @id @default(autoincrement())
-  personal_fname String
-  personal_lname String
-  personal_age String
-  personal_profile String
-  personal_accountid Int
-  personal_account User @relation(fields: [personal_accountid], references: [user_id])
-}
-
-model Card {
-  card_id Int @id @default(autoincrement())
-  card_number String
-  card_password String
-  card_validate String
-  card_ccv String
-  card_paymenth String
-  card_invoice String
-  card_invoiceduedate String
-  card_limit String
-  card_deposith String
-  card_withdrawh String
-  card_transferh String
-  card_ownerid Int
-  card_owner User @relation(fields: [card_ownerid], references: [user_id])
+  user_phone    String     @unique
+  Bank          Bank[]
+  Card          Card[]
+  Personal      Personal[]
 }
 
 model Bank {
-  bank_id Int @id @default(autoincrement())
-  bank_agency String
-  bank_name String
+  bank_id      Int    @id @default(autoincrement())
+  bank_agency  String
+  bank_name    String
   bank_account String
-  bank_number String
+  bank_number  String
   bank_ownerid Int
-  bank_owner User @relation(fields: [bank_ownerid], references: [user_id])
-} 
+  User         User   @relation(fields: [bank_ownerid], references: [user_id])
+}
+
+model Card {
+  card_id             Int    @id @default(autoincrement())
+  card_number         String
+  card_password       String
+  card_validate       String
+  card_ccv            String
+  card_paymenth       String
+  card_invoice        String
+  card_invoiceduedate String
+  card_limit          String
+  card_deposith       String
+  card_withdrawh      String
+  card_transferh      String
+  card_ownerid        Int
+  User                User   @relation(fields: [card_ownerid], references: [user_id])
+}
+
+model Personal {
+  personal_id        Int    @id @default(autoincrement())
+  personal_fname     String
+  personal_lname     String
+  personal_age       String
+  personal_profile   String
+  personal_accountid Int
+  User               User   @relation(fields: [personal_accountid], references: [user_id])
+}
+
+

@@ -1,5 +1,3 @@
-require('dotenv').config({ path: '../../../.env' });
-
 const checkAuth = (req, res, next) => {
   try {
     const token = req.headers.token.split(' ')[1];
@@ -7,8 +5,8 @@ const checkAuth = (req, res, next) => {
       next();
     }
   } catch (error) {
-    res.status(401).json({ state: 'failed', message: 'Auth  Failed' });
+    res.status(401).json({ state: 'unauthorized', message: 'Your API Token is Expired or Invalid.' });
   }
 };
 
-export default checkAuth;
+module.exports = checkAuth()

@@ -11,15 +11,15 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Personal" (
-    "personal_id" SERIAL NOT NULL,
-    "personal_fname" TEXT NOT NULL,
-    "personal_lname" TEXT NOT NULL,
-    "personal_age" TEXT NOT NULL,
-    "personal_profile" TEXT NOT NULL,
-    "personal_accountid" INTEGER NOT NULL,
+CREATE TABLE "Bank" (
+    "bank_id" SERIAL NOT NULL,
+    "bank_agency" TEXT NOT NULL,
+    "bank_name" TEXT NOT NULL,
+    "bank_account" TEXT NOT NULL,
+    "bank_number" TEXT NOT NULL,
+    "bank_ownerid" INTEGER NOT NULL,
 
-    CONSTRAINT "Personal_pkey" PRIMARY KEY ("personal_id")
+    CONSTRAINT "Bank_pkey" PRIMARY KEY ("bank_id")
 );
 
 -- CreateTable
@@ -42,15 +42,15 @@ CREATE TABLE "Card" (
 );
 
 -- CreateTable
-CREATE TABLE "Bank" (
-    "bank_id" SERIAL NOT NULL,
-    "bank_agency" TEXT NOT NULL,
-    "bank_name" TEXT NOT NULL,
-    "bank_account" TEXT NOT NULL,
-    "bank_number" TEXT NOT NULL,
-    "bank_ownerid" INTEGER NOT NULL,
+CREATE TABLE "Personal" (
+    "personal_id" SERIAL NOT NULL,
+    "personal_fname" TEXT NOT NULL,
+    "personal_lname" TEXT NOT NULL,
+    "personal_age" TEXT NOT NULL,
+    "personal_profile" TEXT NOT NULL,
+    "personal_accountid" INTEGER NOT NULL,
 
-    CONSTRAINT "Bank_pkey" PRIMARY KEY ("bank_id")
+    CONSTRAINT "Personal_pkey" PRIMARY KEY ("personal_id")
 );
 
 -- CreateIndex
@@ -60,10 +60,10 @@ CREATE UNIQUE INDEX "User_user_email_key" ON "User"("user_email");
 CREATE UNIQUE INDEX "User_user_phone_key" ON "User"("user_phone");
 
 -- AddForeignKey
-ALTER TABLE "Personal" ADD CONSTRAINT "Personal_personal_accountid_fkey" FOREIGN KEY ("personal_accountid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Bank" ADD CONSTRAINT "Bank_bank_ownerid_fkey" FOREIGN KEY ("bank_ownerid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Card" ADD CONSTRAINT "Card_card_ownerid_fkey" FOREIGN KEY ("card_ownerid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Bank" ADD CONSTRAINT "Bank_bank_ownerid_fkey" FOREIGN KEY ("bank_ownerid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Personal" ADD CONSTRAINT "Personal_personal_accountid_fkey" FOREIGN KEY ("personal_accountid") REFERENCES "User"("user_id") ON DELETE RESTRICT ON UPDATE CASCADE;

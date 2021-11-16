@@ -1,24 +1,24 @@
-import express from 'express';
-import cors from 'cors';
-import morgan from 'morgan';
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const app = express();
 
-// Controllers
-import userController from '../app/controllers/userController';
 
 // Routes
-import mailerRoute from '../app/routes/mailerRoute';
+const AuthRoute = require('../app/routes/auth.route')
+const UserRoute = require('../app/routes/user.route')
 
 // Middleware
-import checkAuth from '../app/middleware/checkAuth';
-
-const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 app.options('*', cors());
-app.use(checkAuth);
-app.use('/v1/auth', userController.auth);
-app.use('/v1/mailer/send', mailerRoute.sendMail);
 
-export default app;
+
+// Assign Routes
+app.use(AuthRoute);
+app.use(UserRoute);
+
+
+module.exports = app
