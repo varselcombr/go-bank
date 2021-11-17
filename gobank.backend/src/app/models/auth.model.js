@@ -1,5 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
-const Prisma = new PrismaClient()
+
+const Prisma = new PrismaClient();
 
 module.exports = {
   register: async (data) => {
@@ -16,26 +17,26 @@ module.exports = {
             personal_lname: data.personal.lname,
             personal_age: data.personal.age,
             personal_profile: data.personal.avatar,
-          }
+          },
         },
-      }
-    })
+      },
+    });
 
-    return user
+    return user;
   },
-  
+
   login: async (data) => {
     const user = Prisma.user.findFirst({
       where: {
         user_email: data.email,
-        user_password: data.pass
+        user_password: data.pass,
       },
       select: {
         user_id: true,
         user_name: true,
         user_password: true,
-      }
-    })
-    return user
+      },
+    });
+    return user;
   },
 };

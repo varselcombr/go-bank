@@ -1,11 +1,12 @@
 const { PrismaClient } = require('@prisma/client');
-const Prisma = new PrismaClient()
+
+const Prisma = new PrismaClient();
 
 module.exports = {
   me: async (id) => {
     const user = Prisma.user.findUnique({
       where: {
-        user_id: id
+        user_id: id,
       },
       select: {
         user_id: true,
@@ -14,11 +15,11 @@ module.exports = {
         user_recovery: true,
         user_email: true,
         Personal: true,
-        Bank: true,
-        Card: true
-      }
-    })
+        Bank: false,
+        Card: false,
+      },
+    });
 
-    return user
-  }
-}
+    return user;
+  },
+};

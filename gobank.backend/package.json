@@ -4,21 +4,24 @@
   "main": "serviceWorker.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "nodemon src/serviceWorker.js"
+    "dev:server": "nodemon src/serviceWorker.js",
+    "dev:queue": "nodemon src/queueService.js"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
     "@prisma/client": "3.5.0",
+    "bull": "^4.1.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.1",
     "prisma": "3.5.0"
   }
 }
