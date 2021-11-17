@@ -15,7 +15,8 @@ header .profile{
 }
 header .profile .avatarImg{
    /* Temporario */
-   background-color: var(--neutral-1);
+   background-image: url("https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/f/3/5/2/f352b0854c086944629262f2d048416f.jpg");
+   background-size: cover;
    width: 56px;
    height: 56px;
    border-radius: 50%;

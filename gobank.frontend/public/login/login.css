@@ -46,7 +46,9 @@ main div.container3{
 .container .img{
    width: 120px;
    height: 120px;
-   background-color: #ccc;
+   background-image: url("https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/f/3/5/2/f352b0854c086944629262f2d048416f.jpg");
+   background-size: cover;
+   background-position: center;
    border-radius: 50%;
 }
 
