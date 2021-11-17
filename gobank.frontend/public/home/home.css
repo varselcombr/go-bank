@@ -56,6 +56,12 @@ nav a span{
 .carousel {
    display: flex;
    flex-direction: row;
+
+   width: 100%;
+   margin-left: 10%;
+   overflow: auto;
+   position: relative;
+   scroll-snap-type: x mandatory;
 }
 
 /* Primeiro cartão de crédito */
@@ -71,6 +77,7 @@ nav a span{
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    
    transition: 0.5s;
+   scroll-snap-align: start;
 }
 
 .creditCard .logo-goCard {
@@ -142,6 +149,7 @@ nav a span{
    margin-left: 300px;
    
    transition: 0.5s;
+   scroll-snap-align: start;
 }
 
 .creditCard1 .logo-goCard {
@@ -202,10 +210,14 @@ nav a span{
    width: 100%;
 }
 
+.carr-btns{
+   display: flex;
+}
+
 #cartao1 {
-   position: relative;
+   /* position: relative;
    top: 190px;
-   left: -45%;
+   left: -45%; */
 
    width: 12px;
    height: 12px;
@@ -215,9 +227,9 @@ nav a span{
 }
 
 #cartao2 {
-   position: relative;
+   /* position: relative;
    top: 190px;
-   left: -45%;
+   left: -45%; */
 
    margin-left: 5px;
 
@@ -238,8 +250,6 @@ nav a span{
 }
 
 .card-1{
-   margin-top: 50px;
-
    display: flex;
    flex-direction: column;
    gap: 25px;
