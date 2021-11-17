@@ -203,7 +203,7 @@ nav a span{
 
 #cartao1 {
    position: relative;
-   top: 180px;
+   top: 190px;
    left: -45%;
 
    width: 12px;
@@ -215,7 +215,7 @@ nav a span{
 
 #cartao2 {
    position: relative;
-   top: 180px;
+   top: 190px;
    left: -45%;
 
    margin-left: 5px;
@@ -237,6 +237,8 @@ nav a span{
 }
 
 .card-1{
+   margin-top: 50px;
+
    display: flex;
    flex-direction: column;
    gap: 25px;

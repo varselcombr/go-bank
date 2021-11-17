@@ -18,3 +18,4 @@ function moveCard1() {
 
   botao1.style.background = "#873F8C"
   botao2.style.background = "#D0D5DB"
+}
