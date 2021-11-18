@@ -56,12 +56,16 @@ nav a span{
 .carousel {
    display: flex;
    flex-direction: row;
-
-   width: 100%;
-   margin-left: 10%;
+   padding: 5px;
+   width: 95%;
+   margin-left: 5%;
    overflow: auto;
    position: relative;
    scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+}
+.carousel::-webkit-scrollbar{
+   display: none;
 }
 
 /* Primeiro cartão de crédito */
