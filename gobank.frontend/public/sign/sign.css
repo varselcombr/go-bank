@@ -54,6 +54,16 @@ main{
 .chatContainer::-webkit-scrollbar{
    display: none;
 }
+
+@keyframes slidein {
+   from{
+      transform: translate(0, 50%);
+   }
+   to{
+      transform: translate(0, 0);
+   }
+}
+
 .sistemMsg{
    width: fit-content;
    max-width: 75%;
@@ -64,6 +74,8 @@ main{
    align-self: flex-start;
    text-align: start;
    font-size: 14px;
+
+   animation: slidein .5s;
 }
 .sistemMsg .terms{
    width: fit-content;
@@ -84,6 +96,8 @@ main{
    border-radius: 10px 10px 0 10px;
    align-self: flex-end;
    font-size: 14px;
+
+   animation: slidein .5s;
 }
 .userInput{
    width: 95%;
