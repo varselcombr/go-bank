@@ -56,11 +56,11 @@ main{
 }
 
 @keyframes slidein {
-   from{
-      transform: translate(0, 50%);
+   from {
+      transform: scale(0.9);
    }
-   to{
-      transform: translate(0, 0);
+   to {
+      transform: scale(1);
    }
 }
 
@@ -75,7 +75,8 @@ main{
    text-align: start;
    font-size: 14px;
 
-   animation: slidein .5s;
+   animation: slidein .5s linear forwards;
+   transform-origin: 0 50%;
 }
 .sistemMsg .terms{
    width: fit-content;
@@ -97,7 +98,8 @@ main{
    align-self: flex-end;
    font-size: 14px;
 
-   animation: slidein .5s;
+   animation: slidein .5s linear forwards;
+   transform-origin: 100% 50%;
 }
 .userInput{
    width: 95%;
