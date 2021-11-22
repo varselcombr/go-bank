@@ -14,6 +14,7 @@ main{
    color: var(--neutral-1);
    border-radius: 20px;
    font-weight: 600;
+   cursor: pointer;
 }
 
 .container{
@@ -26,6 +27,9 @@ main{
    width: 95%;
    padding: 30px;
    gap: 20px;
+   position: absolute;
+   z-index: 100;
+   background-color: var(--neutral-1);
 }
 .container1 h2{
    font-weight: 400;
@@ -55,12 +59,28 @@ main{
    display: none;
 }
 
-@keyframes slidein {
+@keyframes scalein {
    from {
       transform: scale(0.9);
    }
    to {
       transform: scale(1);
+   }
+}
+@keyframes opacityout {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+@keyframes opacityin {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
    }
 }
 
@@ -75,7 +95,7 @@ main{
    text-align: start;
    font-size: 14px;
 
-   animation: slidein .5s linear forwards;
+   animation: scalein .5s linear forwards;
    transform-origin: 0 50%;
 }
 .sistemMsg .terms{
@@ -98,7 +118,7 @@ main{
    align-self: flex-end;
    font-size: 14px;
 
-   animation: slidein .5s linear forwards;
+   animation: scalein .5s linear forwards;
    transform-origin: 100% 50%;
 }
 .userInput{
@@ -119,6 +139,9 @@ main{
    color: var(--neutral-6);
    font-size: 14px;
 }
+.userInput input[type=number]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+ }
 .userInput input::-webkit-input-placeholder{
    color: var(--neutral-6);
    font-size: 14px;

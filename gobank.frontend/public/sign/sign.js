@@ -3,6 +3,11 @@ let userInput = document.querySelector('#inputMsg')
 let inputBox = document.querySelector('.userInput')
 let sendBtn = document.querySelector('#sendMsg')
 
+let mainHtml = document.querySelector('main')
+let container1 = document.querySelector('.container1')
+let nextBtn = document.querySelector('#startBtn')
+nextBtn.addEventListener('click', firstComponent)
+
 const messages = {
    msg1: "Olá!",
    msg2: "Vamos começar o processo de abertura da sua conta.",
@@ -24,6 +29,39 @@ const messages = {
 
 let userInfos = {}
 
+function firstComponent(){
+   container1.style.animation = 'opacityout .5s linear'
+   const animate = setTimeout(function(){
+      mainHtml.removeChild(container1)
+      initChat()
+      clearTimeout(animate)
+   }, 500)
+}
+
+function lastComponent(){
+   mainHtml.innerHTML = ''
+   let container2 = document.createElement('div')
+   container2.classList.add('container')
+   container2.classList.add('container1')
+   container2.style.animation = 'opacityin .5s linear'
+   container2.innerHTML = `
+      <img src="../src/img/illustration3.png" alt="stamp document">
+      <h2>Proposta enviada com sucesso!</h2>
+      <p>Nossa equipe irá analisar as informaçoes enviadas e te retornaremos em breve</p>
+      <button id="startBtn" class="btn">Finalizar</button>
+   `
+   mainHtml.appendChild(container2)
+}
+
+function initChat(){
+   sendSistemMessages1()
+   const request = setTimeout(function(){
+      userInput.addEventListener('keyup', handleKeyup1)
+      sendBtn.addEventListener('click', handleClick1)
+      clearTimeout(request)
+   }, 3000)
+}
+
 function scrollDown(){
    if(chatContainer.scrollHeight >= 0.8 * window.innerHeight){
       let chatHeight = chatContainer.scrollHeight
@@ -36,6 +74,33 @@ function scrollDown(){
 
 function sendUserMsg(callback){
    if(userInput.value.length > 0){
+
+      if(callback == getAge){
+         if(userInput.value < 18 || userInput.value.length > 3){
+            return alertUser(true)
+         }
+      }
+      if(callback == getEmail){
+         let reg = /\S+@\S+\.\S+/
+         let result = reg.test(userInput.value)
+         if(result === false){
+            return alertUser(true)
+         }
+      }
+      if(callback == getPassword){
+         if(userInput.value.length < 8){
+            return alertUser(true)
+         }
+      }
+      if(callback == getAvatar){
+         let reg = /\S+\.\S+/
+         let result = reg.test(userInput.value)
+         if(result === false){
+            return alertUser(true)
+         }
+      }
+
+      alertUser(false)
       let userMsg = document.createElement('div')
       userMsg.classList.add('userMsg')
       if(callback == getPassword){
@@ -52,8 +117,13 @@ function sendUserMsg(callback){
    }
 }
 
-function alertUser(){
-   inputBox.style.border = '1px solid red'
+function alertUser(boolean){
+   if(boolean === true){
+      inputBox.style.border = '1px solid red'
+   }else{
+      inputBox.style.border = 'none'
+   }
+   
 }
 
 function sendSistemMsg(msg){
@@ -197,6 +267,7 @@ function requestAge(){
    const request = setTimeout(function(){
       sendSistemMsg(messages.msg7)
       userInput.setAttribute('placeholder', 'Digite sua idade')
+      userInput.setAttribute('type', 'number')
       userInput.addEventListener('keyup', handleKeyup4)
       sendBtn.addEventListener('click', handleClick4)
       clearTimeout(request)
@@ -214,6 +285,7 @@ function requestConfirm(){
    const request = setTimeout(function(){
       sendSistemMsg(messages.msg8)
       userInput.setAttribute('placeholder', 'Digite \"Ok\" para continuar')
+      userInput.setAttribute('type', 'text')
       userInput.addEventListener('keyup', handleKeyup5)
       sendBtn.addEventListener('click', handleClick5)
       clearTimeout(request)
@@ -229,7 +301,8 @@ function getConfirm(){
 function requestCpf(){
    const request = setTimeout(function(){
       sendSistemMsg(messages.msg9)
-      userInput.setAttribute('placeholder', 'Digite seu CPF')
+      userInput.setAttribute('placeholder', 'Digite seu CPF sem pontuação!')
+      userInput.setAttribute('type', 'number')
       userInput.addEventListener('keyup', handleKeyup6)
       sendBtn.addEventListener('click', handleClick6)
       clearTimeout(request)
@@ -343,15 +416,7 @@ function getRecovery(value){
 
    console.log(userInfos)
 
-   // ending
+   // SEND INFOS
+   
+   lastComponent()
 }
-
-function initChat(){
-   sendSistemMessages1()
-   setTimeout(function(){
-      userInput.addEventListener('keyup', handleKeyup1)
-      sendBtn.addEventListener('click', handleClick1)
-   }, 3000)
-}
-
-initChat()
