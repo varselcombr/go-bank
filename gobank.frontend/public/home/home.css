@@ -8,12 +8,12 @@ header{
    color: var(--neutral-1);
    padding: 20px;
 }
-header .profile{
+.c-profile{
    display: flex;
    align-items: center;
    gap: 10px;
 }
-header .profile .avatarImg{
+.c-profile__img{
    /* Temporario */
    background-image: url("https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/f/3/5/2/f352b0854c086944629262f2d048416f.jpg");
    background-size: cover;
@@ -35,13 +35,13 @@ main{
    gap: 10px;
 }
 
-nav{
+.c-navbar{
    width: 90%;
    display: flex;
    gap: 10px;
    justify-content: start;
 }
-nav a{
+.c-navbar a{
    background-color: #fff;
    padding: 5px 10px;
    border-radius: 20px;
@@ -49,7 +49,7 @@ nav a{
    font-weight: 600;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-nav a span{
+.c-navbar a span{
    color: var(--primary-3);
 }
 
@@ -253,56 +253,56 @@ nav a span{
    font-size: 14px;
 }
 
-.card-1{
+.c-card1{
    display: flex;
    flex-direction: column;
    gap: 25px;
 }
-.card-1 .head{
+.c-card1__container1{
    display: flex;
    justify-content: space-between;
 }
-.card-1 .head p{
+.c-card1__container1 p{
    font-weight: 600;
 }
-.card-1 .graf{
+.c-card1__container2{
    /* Temporario */
    height: 5px;
    background-color: var(--primary-4);
 }
-.card-1 .last{
+.c-card1__container3{
    display: flex;
    align-items: center;
    gap: 20px;
 }
-.card-1 .last .iconImg{
+.c-card1__container3 .iconImg{
    /* temporario */
    width: 40px;
    height: 40px;
    background-color: var(--acent-1);
    border-radius: 50%;
 }
-.card-1 .last .data{
+.c-card1__container3 .data{
    margin-left: auto;
 }
-.card-2{
+.c-card2{
    padding: 10px 20px;
    display: flex;
    justify-content: space-between;
    font-weight: 600;
 }
-.card-2 span{
+.c-card2 span{
    font-weight: 700;
    color: var(--primary-4);
 }
-.card-3{
+.c-card3{
    display: flex;
    justify-content: space-between;
 }
-.card-3 img{
+.c-card3 img{
    width: 45px;
 }
-.card-3 a{
+.c-card3 a{
    display: flex;
    flex-direction: column;
    align-items: center;
