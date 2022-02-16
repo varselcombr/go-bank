@@ -11,7 +11,7 @@ const {Navigator, Screen} = createNativeStackNavigator<propsNavigationStack>()
 export default function Routes() {
 	return (
       <NavigationContainer>
-         <Navigator initialRouteName="Enter" screenOptions={{headerShown: false}}>
+         <Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
             <Screen name="Enter" component={Enter} />
             <Screen name="Home" component={Home} />
          </Navigator>

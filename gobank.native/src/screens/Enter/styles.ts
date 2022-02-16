@@ -17,6 +17,7 @@ export const Title = styled.Text`
    color: #fff;
    font-size: 48px;
    align-self: flex-start;
+   font-family: ${({theme}) => theme.fonts.regular};
 `
 
 export const BtnView = styled.View`
@@ -35,6 +36,7 @@ export const SignButton = styled.Pressable`
 
 export const SignText = styled.Text`
    color: #6E3372;
+   font-family: ${({theme}) => theme.fonts.bold};
 `
 
 export const LoginButton = styled.Pressable`
@@ -49,4 +51,5 @@ export const LoginButton = styled.Pressable`
 
 export const LoginText = styled.Text`
    color: #fff;
+   font-family: ${({theme}) => theme.fonts.regular};
 `

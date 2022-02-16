@@ -12,7 +12,7 @@ export const Enter = () => {
   return (
     <Background source={require(image)} resizeMode="cover">
     <Container>
-      <Title>Go</Title>
+      <Title>go</Title>
       <BtnView>
         <SignButton 
           style={({ pressed }) => [
